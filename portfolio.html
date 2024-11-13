@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fi-fi">
+<!-- Document checking completed. No errors or warnings to show. -->
+<head>
+  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio">
+  <meta name="keywords" content="HTML,CSS,Portfolio,2022,ICT">
+  <meta name="author" content="Hirvikorpi Konsta"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--meta tagit-->
+  <link href="styles/lightbox.css" type="text/css" rel="stylesheet">
+  <link href="styles/styles.css" type="text/css" rel="stylesheet"><!--Kutsutaan tyylitiedostoja-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&family=Montserrat&family=Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+    
+<body class="folio_body">
+  <div class="folio_content"> <!-- Container sivun kaikkea sisältöä varten -->
+    <div class="row"> <!--Eri col luokkien toimintaa vartten-->
+      <header class="folio_header text_kodchasan"> <!-- Header -->
+          <h1> Portfolio</h1>
+          <div class="folio_icon_container icons_container"> <!-- Icon container -->
+            <a href="https://www.linkedin.com/in/konsta-h-200b76113" target="_blank" title="LinkedIn profiilini." class="icons"><i class="fab fa-linkedin"></i></a><a href="https://twitter.com/KonstaH1" target="_blank" title="Twitter profiilini." class="icons"><i class="fab fa-twitter-square"></i></a><a href="https://www.facebook.com/jon.jonathan.522066" target="_blank" title="Facebook profiilini." class="icons"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/jonjonathan4/" target="_blank" title="Instagram profiilini." class="icons"><i class="fab fa-instagram"></i></a>
+            <!-- Ikonit ja linkit eri SOME profiileja varten. Facebook, Twitter ja Instagram profiilit ovat haettu vanhoista profiileista. Päivitän nämä oikeilla kun otan tämän sivun julkiseen käyttöön -->
+          </div>
+      </header>
+
+      <nav class="nav text_montserrat"> <!--Kutsutaan fontti ja nav tyyli-->
+        <div id="sidebar_id" class="sidebar"> <!--Lisätään sidebar, tämä piilotetaan kunnes näyttö on tarpeeksi pieni-->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a> <!--Javascriptillä nappi sidebarin sulkemiseksi-->
+          <a href="index.html" target="_self" class="link">Etusivu</a>
+          <a href="mina.html" target="_self" class="link">Minusta</a>
+          <a href="portfolio.html" target="_self" class="link" style="background-color: #06729c;">Portfolio</a>
+          <a href="yhteys.html" target="_self" class="link">Yhteystiedot</a> <!--Linkit-->
+        </div>
+        <div id="sidebar_container">
+        <button class="openbtn" onclick="openSidebar()">☰ Navigointi</button>
+        </div>
+        <ul>
+          <li><a href="index.html" target="_self" class="link">Etusivu</a></li><!--
+          --><li><a href="mina.html" target="_self" class="link">Minusta</a></li><!--
+          --><li><a href="portfolio.html" target="_self" class="link" style="background-color: #06729c">Portfolio</a></li><!--
+          --><li><a href="yhteys.html" target="_self" class="link">Yhteystiedot</a></li><!---->
+          <!--Kommentoidaan linkkien väli HTML:sä jotta sivustolle ei ilmene tyhjiä välejä-->
+        </ul>
+      </nav>
+
+      <article class="folio_article_introduction col-12 col-s-12">
+        <h2 class="text_roboto" >Osaaminen</h2> <!-- Ylin otsikko -->
+      </article>
+
+      <main class="folio_main">  <!-- Tästä alkaa sivun eri artikkelit-->
+        <div class="col-xl-2 col-1 col-s-1 col-xs-1"></div> <!--Erotetaan artikkeleja vasemmasta laidasta-->
+        <div class="col-xl-8 col-10 col-s-10 col-xs-10" style="background-color: rgb(240, 240, 240);border-radius: 10px;border: 2px solid black;"> <!-- Sisältää sivun artikkelit -->
+        
+          <article class=folio_article1 > <!--Ensimmäinen(ICT-työkokemus) palsta-->
+              <h2 class="text_roboto col-12" >ICT-työkokemus</h2>
+              
+            <section>
+              <h3 class="text_roboto col-12">Keskisuomalainen OYJ</h3>
+              <div class="col-xl-6 col-6 col-s-12">  <!-- Määritetään kuinka paljon teksti vie tilaa -->
+                <p class="text_montserrat">Olin Keskisuomalainen OYJ:ssä työssäoppimisessa tieto- ja tietoliikenne tekniikan (ICT-asentaja) koulutusta varten.
+                  <br><br>Toimin ICT-asiantuntijana ja tehtävänäni oli antaa tukea konsernin muille työntekijöille joko menemällä paikan päälle tai Service deskin kautta. Tein myös muita hommia kuten palvelimien virtualisointia ja konfigurointia.
+                  <br><br>Lisäksi tein myös verkkokaappien ja palvelinräkkien kaapelointia sekä yleistä kaapeleiden mittausta. </p>
+              </div>
+              <div class="remove col-s-1 "></div> <!--kutsutaan "remove" luokka jotta div katoaa kun ikkuna on tarpeeksi leveä-->
+              <figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Määritetään kuinka paljon kuva vie tilaa -->
+                <a href="images/mittaus.jpg" data-lightbox="folio" data-title="EXFO valolähde" title="EXFO valolähde" target="_blank"><img src="images/mittaus.jpg" title="EXFO valolähde" class="folio_pic" alt="Kuva EXFO:n työkalusta"></a>
+                <figcaption class="figure_caption_text">Kuva EXFO:n valolähteestä</figcaption>
+              </figure>
+              <div class="col-xl-1 col-1 col-s-1 "></div> <!--Erotetaan kuvaa reunasta-->
+            </section>
+
+            <section>
+              <h3 class="text_roboto col-12">Telia-Inmics Nebula</h3>
+              <div class="col-xl-6 col-6 col-s-12">  <!-- Määritetään kuinka paljon teksti vie tilaa -->
+                <p class="text_montserrat">Olen tehnyt töitä Telia-Inmics Nebulassa (nykyään Telia Cygate ja Telia Finland) kohta 4 vuotta. Työkuvani on "Sovellusasiantuntija".
+                <br><br>Pääasiassa teen IT-tuki töitä eri yritysasiakkaiden käyttäjille ja näiden IT-osastoille. Työnkuvaan kuuluu mm. käyttäjähallinnointi AAD ja AD työkaluilla, työasemien käyttöönotto, yhteistyö asiakkaiden IT-osastojen kanssa sekä yleisten IT-ongelmien ratkaiseminen. Teen myös muita asioita kuten palvelunkäyttöönotto kaavoituksia sekä tuotan että ylläpidän dokumentointia.
+                <br><br>Työssä tutuksi tulleita ympäristöjä ovat eri Windows palvelimet, Microsoftin eri admin centerit, mm. O365 Admin Center ja Exchange Admin Center, ympäristöt kuten Azure AD, AD, Intune. </p>  
+              </div>
+              <div class="remove col-s-1 "></div> <!--kutsutaan "remove" luokka jotta div katoaa kun ikkuna on tarpeeksi leveä-->
+              <figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Määritetään kuinka paljon kuva vie tilaa -->
+                <a href="images/tyokalut.jpg" data-lightbox="folio" data-title="Työkalut" title="Työkalut" target="_blank"><img src="images/tyokalut.jpg" title="Työkalut" class="folio_pic" alt="Kuva kannettavasta ja kuulokkeista"></a>
+                <figcaption class="figure_caption_text">Työn 2 päämääräistä työkalua</figcaption>
+              </figure>
+              <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuvaa reunasta-->
+            </section>
+          </article>
+      
+          <article class="folio_article2"> <!--Toinen(ICT-asentajan koulutus) palsta -->
+            <h2 class="text_roboto col-12">ICT-asentajan koulutus</h2>
+            <div class="col-xl-6 col-6 col-s-12"> <!-- Määritetään kuinka paljon teksti vie tilaa -->
+              <p class="text_montserrat">Valmistuin tieto- ja tietoliikennetekniikan peruskoulutuksesta Gradia Jyväskylästä 2019.
+              <br><br>Koulussa teimme paljon elektronisten laitteiden purkamista, kasaamista ja korjausta. Lisäksi teimme mm. sähköasennuksia, kaapeleiden kokoamista, kuituhitsausta ja paljon elektronisten laitteiden simulointia. Järjestelmien simulointia olen jatkanut myös vapaa-ajalla</p>
+            </div>
+            <div class="remove col-s-1 "></div><!--kutsutaan "remove" luokka jotta div katoaa kun ikkuna on tarpeeksi leveä-->
+            <figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Määritetään kuinka paljon kuva vie tilaa -->
+              <a href="images/electronics.png" data-lightbox="folio" data-title="Multisim kaavio" title="Kaavio" target="_blank"><img src="images/electronics.png" title="Multisim kaavio"  class="folio_pic" alt="Kuva Multisim kaaviosta hälytintä varten"></a>
+              <figcaption class="figure_caption_text">Multisim:issä rakennettu kaavio varashälytintä varten.</figcaption>
+            </figure>
+            <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuvaa reunasta-->
+          </article>
+      
+          <article class="folio_article3"><!--Kolmas(Web sivut) palsta -->
+            <h2 class="text_roboto col-12">Kokemus web-sivu kehittämisestä</h2>
+            <div class="col-xl-6 col-6 col-s-12"> <!-- Määritetään kuinka paljon teksti vie tilaa -->
+              <p class="text_montserrat">Olen aloittelija web-sivujen rakentamisessa, olen rakentanut muutamia sivuja vapaa-ajalla ja opintoja varten käyttämällä pääasiassa HTML ja CSS sekä hyödyntämällä vähän JavaScriptiä.
+                <br><br>Olen rakentanut muutamia pieniä fullstack palveluita jotka käyttivät verkkosivuja kuten sääpalvelu jonne syötetään lokaatiotiedot ja saat tämän sijainnin sään.</p>  
+            </div>
+            <div class="remove col-s-1 "></div><!--kutsutaan "remove" luokka jotta div katoaa kun ikkuna on tarpeeksi leveä-->
+            <figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Määritetään kuinka paljon kuva vie tilaa -->
+              <a href="images/site.jpg" data-lightbox="folio" data-title="Apache" title="Apache" target="_blank"><img src="images/site.jpg" title="Apache HTTP palvelu"  class="folio_pic" alt="Kuva tuoreesta Apache HTTP palvelusta"></a>
+              <figcaption class="figure_caption_text">Kuva tuoreesta VM:sta jolla käynnissä Apache HTTP</figcaption>
+            </figure>
+            <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuvaa reunasta-->
+          </article>
+      
+          <article class="folio_article4"><!--nejäs(koodaus) palsta -->
+            <h2 class="text_roboto col-12">Koodaus ja muu tietotekninen taito</h2>
+             <div class="col-xl-6 col-6 col-s-12"> <!-- Määritetään kuinka paljon teksti vie tilaa -->
+              <p class="text_montserrat">Minulla on kokemusta virtualisoinnista, virtuaaliympäristöistä ja asennuksista Virtualbox ja WMware ohjelmistoilla. Lisäksi olen Ciscon ohjelmistolla simuloinut ja harjoitellut verkkojen rakentamista.
+                <br><br>Laajin simuloimani verkko on tällä hetkellä 8:n laitteen kokoinen. Verkko koostuu työasemista, kytkimistä, palomuureista ja reitittimistä. Verkkoon on konfiguroitu VLAN:it ja se toimii IPv4 ja IPv6 osoitteilla.
+				<br><br>Olen myös opintojen ohella suunnitellut ja toteuttanut kokonaisia tietoliikenneverkkoja simuloiduissa ympäristöissä.
+                <br><br>Olen koodannut pääasiassa Pythonilla, C#, Javascriptillä sekä C++. JavaScriptiä olen hyödyntänyt nettisivujen teossa. Olen myös koodannut RasbperryPI:llä ja erilaisilla sulautetuilla järjestelmillä.
+                <br><br>Olen myös tutustunut eri palveluiden isännöintiin, mm. Apache HTTP palvelin, pelaamiseen tarkoitetut palvelimet sekä näiden hostaaminen joko omilla palvelimilla tai hostaus palveluilla.
+                <br><br>Tuttuja käyttöjärjestelmiä ovat muutamat Linux järjestelmät (Kali, Ubuntu, CentOS, Lubuntu), Windows (10, 7, Vista, XP), Windows 10 Server 2016, CiscoIOS ja VyOS</p>  
+            </div>
+            <div class="remove col-s-1 "></div><!--kutsutaan "remove" luokka jotta div katoaa kun ikkuna on tarpeeksi leveä-->
+            <figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Määritetään kuinka paljon kuva vie tilaa -->
+              <a href="images/img_network.png" data-lightbox="folio" data-title="Simuloitu verkko" title="Verkko" target="_blank"><img src="images/img_network.png" title="Simuloitu verkko"  class="folio_pic" alt="Kuva virtuaaliverkosta"></a>
+              <figcaption class="figure_caption_text">Kuva simuloidusta verkosta</figcaption>
+            </figure>
+            <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuvaa reunasta-->
+          </article>
+        </div>
+        <div class="col-xl-2 col-1 col-s-1 col-xs-1"></div><!--Erotetaan sisältöä reunasta-->
+      </main>
+    </div>
+  </div>
+  
+<footer class="text_montserrat footer"> <!-- Footer, kutsutaan footer luokkaa ja fontti tyyliä -->
+      <p>Tekijä: Hirvikorpi Konsta</p>
+      <address><p>Ota yhteyttä: <a href="mailto:konsta.hirvikorpi@gmail.com">konsta.hirvikorpi@gmail.com</a></p></address>
+      <p><small>&copy; Copyright 2024, Hirvikorpi Konsta.</small></p>
+</footer>
+<script>
+  function openSidebar() {
+    document.getElementById("sidebar_id").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  function closeSidebar() {
+    document.getElementById("sidebar_id").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }  
+</script>
+<script src="js/lightbox-plus-jquery.js"></script> <!--Kutsutaan lightbox skriptiä juuri ennen bodyn sulkemista, ohjeen mukaan-->
+</body>
+</html>

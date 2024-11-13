@@ -1,0 +1,570 @@
+@charset "utf-8";
+/* Congratulations! No Error Found. */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+     /* Jokaiselle elementille wrap, margin 0 ja border-box */
+}
+html, body {
+    width: 100%;
+    height: 100%; /* Asetetaan HTML:n ja Body:n korkeus täyttämään selaimen */
+}
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Verdana", sans-serif; /* Asetetaan backup fontteja */
+}
+.text_montserrat{    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em /* Asetetaan class mitä kutsua fonttia varten & koko */
+}
+.text_roboto {
+    font-family: 'Roboto', sans-serif; /* Asetetaan class millää kutsua fonttia */
+}
+.text_kodchasan {
+    font-family: 'Kodchasan', sans-serif; /* Asetetaan luokka mitä kutsua fonttia varten */
+}
+
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.index_body .row {
+    margin-bottom: 10%;
+}
+.index_header { 
+    background-color: #06729c;
+    text-align: center;
+    color: #F0EBEB; 
+    font-size: 200%;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* Etusivun header. Tehdään headerista flex elementti. align-items ja justify-content jotta sisältö keskittyy. */
+}
+@media only screen and (max-width:960px) {
+    .index_header {
+        flex-direction: column; /*Muutetaan elementtien suunta pylvääksi kun selain pienenee*/
+    }
+}
+.index_header_text {
+    margin: 0 1em 0 0;
+    font-size: 200%;
+    overflow: hidden; /* Erotetaan kuva ja header teksti, asetetaan hidden overflow ja fonttikoko*/
+}
+@media only screen and (max-width:960px) {
+    .index_header_text {
+        margin: 0 0 0 0; /*Otetaan marginit pois käytöstä kun selain pienenee ja elementit asettuvat päällekkäin*/
+    }
+}
+.index_icons {
+    text-align: left; /*Keskitetään ikonit vasempaan reunaan*/
+}
+@media only screen and (max-width:960px) {
+    .index_icons {
+        text-align: center; /*Kun selain pienenee ja elementit asettuvat toistensa päälle, siirretään ikonit keskelle*/
+    }
+}
+.index_icons a{
+    margin: 0 5px; /*Erotetaan ikonit toisistaan margineilla*/
+}
+.index_icons i {
+   color: #fff;
+   font-size: 1em; /* Astetaan ikoneille väri ja koko*/
+}
+.index_icons i:hover {
+    color: black /* Ikoneille eri väri kun hiiri hoveraa päällä */
+}
+.index_header_pic {
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+    min-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid rgb(41, 41, 41); 
+} /* Headerissa sijaitsivan omakuvan tyyli. Pyöristetään kuva border-radiuksella, skaalaus, keskitys "display:block" ja "margin: 0 auto" toiminnoilla */
+
+@media only screen and (max-width:960px) {
+    .index_headerpic {
+        margin: 1em auto; /*Asetetaan Headerin omakuvalle ylä- ja alapuolelle margin kun selain pienenee.*/
+    }
+}
+@media only screen and (max-width:400px) {
+    .index_header_pic {
+        display: none; /* Asetetaan kuva katoamaan jos selain on hyvin pieni */
+    }
+}
+.index_article_introduction {
+    width: 80%;
+    margin: 4em auto;
+    text-align: center; /* "Terveisiä" otsikon keskitys, leveys ja margin */
+}
+.index_article_introduction h2 {
+    margin-bottom: 1em; /*Erotetaan "Terveisiä" teksti muusta tekstistä*/
+}
+#introduction_wrapper {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1em;
+    margin: 0 0; /*Kääritään "Terveisiä" artikkeli div:iin jotta voidaan asettaa sopiva tyyli erottaakseen se taustasta*/
+}
+#introducion_list {
+    display: inline-block; 
+    text-align: left; 
+    margin-top: 1em; /*Asetetaan "Terveisiä" otsikon alla olevan listan tyyli.*/
+}
+.index_article_top h2 {
+    margin-bottom: 0.5em;
+}
+.index_article_top li{
+    margin: 0.25em 0; /*Erotetaan listan li elementit toisistaan*/
+}
+.background {
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px; /*Luodaan yleinen tyyli valkoista taustaa varten jota voi kutsua HTML:ssä*/
+}
+.index_pic {
+    border-radius: 12px;
+    border: 2px solid #555;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top /* "Harrastukset" ja "Minusta" Artikkeleiden kuville tyylit ja skaalaus */
+}
+@media only screen and (max-width:991px) {
+    .index_pic {
+        max-width: 80%; /* Pienennetään kuvien kokoa kun ne asettuvat toistensa päälle */
+    }
+}
+.index_figure {
+    text-align: center;
+    /* Keskitetään figure elemttien sisältämät kuvat */
+}
+.index_main_article {
+    border: 2px solid black;
+}
+.index_upper_article h2 {
+    margin-top: 2em; /*Erotetaan ensimmäistä artikkelia otsikosta*/
+}
+@media only screen and (max-width:991px) {
+    .index_upper_article h2 {
+        text-align: center; /* Pienennetään kuvien kokoa kun ne asettuvat toistensa päälle */
+    }
+}
+@media only screen and (max-width:991px) {
+    .index_bottom_article h2 {
+        text-align: center; /* Pienennetään kuvien kokoa kun ne asettuvat toistensa päälle */
+    }
+}
+.index_bottom_article h2 {
+    margin-top: 2em; /*Erotetaan artikkelia ylemmästä artikkelista*/
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.yhteys_body {
+    display: flex;
+    flex-direction: column;
+}
+.yhteys_content{
+    flex: 1 0 auto;
+    /*"flex: 1 0 auto" on shorthand komennolle "flex-grow: 1; flex-shrink: 0; flex-basis: auto;*/
+    /*flex-grow 1 määrittää että kaikki flex itemit kasvavat samassa tahdissa.*/
+    /*flex-shrink 0 määrittää että flex itemit eivät käytä wrap toimintoa ja säilyttävät tarvittavan pituuden*/
+    /*flex-basis auto määrittää että flex elementtien koko määräytyy niiden sisällön mukaan */
+    margin-bottom: 10%; /*Kääritän sivun sisältö div:iin. Tämän avulla työnnettään footer kiinni sivun pohjaan*/
+}
+.yhteys_header {
+    background-color: #06729c;
+    color: #F0EBEB;
+    text-align: center;
+    padding: 1.5em; /* määritetään headerille tyyli ja tekstin keskitys */
+}
+.yhteys_article_heading {
+    padding: 15px;
+    text-align: center;
+    margin: 1em auto; /*"Ota yhteyttä" Otsikolle marginit ja font-koko */
+}
+.yhteys_article_heading h2 {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px; /*"Ota yhteyttä" otsikolle taustaväri ja muu tyyli*/
+}
+.yhteys_content_section {
+    background-color: rgb(240, 240, 240);
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+     /* Asetetaan kummallekkin palstalle sama tyyli ja marginit */
+}
+.yhteys_content_section h2, h3 {
+    padding: 15px; /* Asetetaan palstojen otsikoille tyyli */
+}
+.yhteys_content_section li {
+    padding: 2px /* Asetetaan palstojen listoille padding */
+}
+.yhteys_content_section span {
+    text-decoration: underline /* Alleviivaus tietylle tekstille */
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*mina.html*/
+
+.mina_header_content {
+    display: inline-block;
+}
+.mina_body {
+    display: flex;
+    flex-direction: column;
+}
+.mina_icon_container {
+    text-align: left;
+}
+.mina_content {
+    flex: 1 0 auto; 
+    /*"flex: 1 0 auto" on shorthand komennolle "flex-grow: 1; flex-shrink: 0; flex-basis: auto;*/
+    /*flex-grow 1 määrittää että kaikki flex itemit kasvavat samassa tahdissa.*/
+    /*flex-shrink 0 määrittää että flex itemit eivät käytä wrap toimintoa ja säilyttävät tarvittavan pituuden*/
+    /*flex-basis auto määrittää että flex elementtien koko määräytyy niiden sisällön mukaan */
+    margin-bottom: 10%; /*kääritään sivun sisältö div:iin ja työnnetään footer kiinni sivun pohjaan. */
+}
+.mina_header {
+    background-color: #06729c;
+    color: #F0EBEB;
+    text-align: center;
+    padding: 1.5em; /* määritetään headerille taustaväri, keskitys ja padding */
+}
+.mina_article {
+    text-decoration: none; /*tekstin koristelut pois.*/
+}
+.mina_article h2 {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 2em;
+    margin: 1em auto; /* "Vähän infoa minusta" Otsikon tyyli ja erotus kuvasta sekä ikoneista. asetetaan taustaväri jotta teksti erottuu taustaefektistä */
+}
+.mina_article_pic {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 40%;
+    border: 4px solid rgb(41, 41, 41);
+    border-radius: 50%; /* Keskitetään omakuva, asetetaan max-leveys ja muut asetukset. */
+}
+@media only screen and (max-width:1500px) {
+    .mina_article_pic {
+        min-width: 250px; /* Asetetaan kuvalle minimikoko kun selain on pienempi kuin 1500px */
+    }
+}
+@media only screen and (max-width:340px) {
+    .mina_article_pic {
+        min-width: 100%; /* Asetetaan kuvalle minimikoko kun selain on pienempi kuin 340px */
+    }
+}
+
+.mina_text {
+    margin-top: 4em;
+    background-color: rgb(240, 240, 240);
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 10px; /* Erotetaan kuva ja artikkelin teksti, asetetaan taustaväri jotta teksti erottuu taustaefektistä */
+    
+}
+.mina_text h3 {
+    text-decoration: none; /*Poistetaan alleviivaus*/
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.folio_body {
+    font-size: 100%;
+    display: flex;
+    flex-direction: column; /* Asetetaan fonttikoko, flex asetukset eri col- luokkia varten */
+}
+.folio_icon_container {
+    text-align: left;
+    display: inline;
+}
+.folio_content {
+    flex: 1 0 auto;
+    /*"flex: 1 0 auto" on shorthand komennolle "flex-grow: 1; flex-shrink: 0; flex-basis: auto;*/
+    /*flex-grow 1 määrittää että kaikki flex itemit kasvavat samassa tahdissa.*/
+    /*flex-shrink 0 määrittää että flex itemit eivät käytä wrap toimintoa ja säilyttävät tarvittavan pituuden*/
+    /*flex-basis auto määrittää että flex elementtien koko määräytyy niiden sisällön mukaan */
+    margin-bottom: 10%; /* Tyyli, sisältää kaiken sisällön paitsi footerin */
+}
+.folio_header {
+    background-color: #06729c;
+    color: #F0EBEB;
+    text-align: center;
+    padding: 1.5em; /* määritetään headerille tyyli ja tekstin keskitys */
+}
+.folio_main h2 {
+    padding-left: 1em;
+    margin-top: 2em; /* Määritetään tyyli palstojen otsikoille */
+}
+.folio_main h3 {
+    padding-left: 2em;
+}
+.folio_article_introduction {
+    text-align: center;
+    margin: 1em auto;/* Keskitetään pääotsikko*/
+}
+.folio_article_introduction h2 {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.folio_pic {
+    border-radius: 12px;
+    border: 2px solid #555;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;/* Määritetään kaikille sivun kuville tyylit. Asetetaan minimileveys jotta kuvat eivät pienene liikaa.*/
+    
+}
+
+.folio_figure {
+    text-align: center /* Keskitetään kuvat */
+}
+@media only screen and (min-width: 768px) {/*Kun sivu on tarpeeksi leveä otetaan tietty col-x div pois käytöstä*/
+    .remove{
+        display: none;
+    }
+  }
+@media only screen and (min-width: 1920px) {/*Kun sivu on tarpeeksi leveä rajoitetaan kuvien kokoa jotta ne eivät kasva liian suureksi*/
+    .folio_body img {
+        max-width: 80%;
+  }
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*Navigaatio, ikonit, footer*/
+
+.nav {
+    background-color: #191a1a;
+    text-align: center;
+    min-height: 2.5em;
+    line-height: 2.5em;
+    overflow: hidden; /*universaali tyyli kaikkien sivujen <nav> osiolle*/
+}
+.nav ul{
+    padding: 0; /*Otetaan lista elementistä padding pois*/
+}
+.nav li{
+    display: inline; /*asetetaan linkit "inline-block" tilaan jotta ne sijoittuvat toistensa viereen.*/
+}
+.link {
+    background-color: #111; /*linkkien taustaväri*/
+    border: none;
+    padding: 0.66em 1em 0.65em;
+    color: white;/*tekstin väri*/
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s; /*asetetaan 0.4s kestävä värimuutos mustasta siniseen*/
+    cursor: pointer; /*muutetaan kursori linkin kohdalla*/
+}  
+.link:hover {
+    background-color: #06729c; /*linkkinapin väri muuttuu kun hiiri on sen yllä*/
+    color: white; /*tekstin väri*/
+}
+
+.sidebar { /*Asetettaan sivupalkin tyyli ja pieni siirtymäaika*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a { /*Asetetaan sivupalkin linkkinapeille tyyli*/
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar .closebtn { /*Määritetään sivupalkin sulkemisnäppäimen sijainti*/
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#sidebar_container { /*Keskitetään navigointi nappi käärimällä se div:iin. Piilotetaan tässä vaiheessa*/
+    display: none;
+}
+.openbtn { /*"navigointi" napin tyyli*/
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    display: none; /*Piilotetaan nappi kunnes näyttö on tarpeeksi pieni*/
+}
+@media only screen and (max-width: 600px) {
+    .openbtn {display: block;}
+    #sidebar_container {display: inline-block;}
+    .nav ul {display: none;} /*KUn näyttö on alle 600px leveä otetaan normaali navigointipalkki pois käytöstä ja otetaan sivupalkki takaisin näkyviin*/
+} 
+.openbtn:hover {
+    background-color: #444;
+}
+  
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+/*Alle 450px näytöillä vähennä paddingiä ja piennennä fonttia*/
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+.icons_container {
+    text-align: center; /* Keskitetään ikonit */
+}
+.icons_container i{
+    color: rgb(230,230,230);
+    margin: 0.2em 0.05em;
+}
+.icons_container i:hover{
+    color:black;
+}
+.icons {
+    font-size: 3em;
+    max-width: 50%;
+    margin: 0 0.1%;
+    color: #191a1a; /* Ikonien tyyli, erotus, oletusväri */
+}
+.footer {
+    background-color: #06729c;
+    color: #fff;
+    text-align: center;
+    margin: auto 0 0 0;
+    font-size: 0.9em;
+    padding: 0;
+    flex-shrink: 0; 
+    /*flex-shrink 0 määrittää että flex itemit eivät käytä wrap toimintoa ja säilyttävät tarvittavan pituuden*/
+    /* Asetetaan footerin tyyli kaikille sivuille */
+}
+.footer a {
+    color: black
+}
+.footer a:hover {
+    color: white
+}
+.footer a:visited {
+    color:black
+}
+.figure_caption_text {
+    font-size: 0.6em;
+    margin: 0 0 0 0%;
+    text-align: center; /* Asetetaan kuvien alla olevan tekstin tyyli */
+}
+
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*Grid konfiguraatio*/
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] { /* Mobiililaitteille */
+  width: 100%; 
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px; /* Asetetaan lohkot float:left jotta ne asuttuvat oikein */
+}
+@media only screen and (max-width: 600px) { /* hyvin pienille laitteille */
+    .col-xs-1 {width: 8.33%;}
+    .col-xs-2 {width: 16.66%;}
+    .col-xs-3 {width: 25%;}
+    .col-xs-4 {width: 33.33%;}
+    .col-xs-5 {width: 41.66%;}
+    .col-xs-6 {width: 50%;}
+    .col-xs-7 {width: 58.33%;}
+    .col-xs-8 {width: 66.66%;}
+    .col-xs-9 {width: 75%;}
+    .col-xs-10 {width: 83.33%;}
+    .col-xs-11 {width: 91.66%;}
+    .col-xs-12 {width: 100%;}
+}
+@media only screen and (min-width: 600px) { /* Tableteille */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {/*Keskitason laitteille*/
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 992px) { /*Pöytäkoneille*/
+    .col-l-1 {width: 8.33%;}
+    .col-l-2 {width: 16.66%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33%;}
+    .col-l-5 {width: 41.66%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33%;}
+    .col-l-8 {width: 66.66%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33%;}
+    .col-l-11 {width: 91.66%;}
+    .col-l-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1200px) { /*Isoille laitteille*/
+    .col-xl-1 {width: 8.33%;}
+    .col-xl-2 {width: 16.66%;}
+    .col-xl-3 {width: 25%;}
+    .col-xl-4 {width: 33.33%;}
+    .col-xl-5 {width: 41.66%;}
+    .col-xl-6 {width: 50%;}
+    .col-xl-7 {width: 58.33%;}
+    .col-xl-8 {width: 66.66%;}
+    .col-xl-9 {width: 75%;}
+    .col-xl-10 {width: 83.33%;}
+    .col-xl-11 {width: 91.66%;}
+    .col-xl-12 {width: 100%;}
+  }
