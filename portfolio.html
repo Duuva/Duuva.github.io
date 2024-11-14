@@ -131,8 +131,35 @@
               <a href="images/img_network.png" data-lightbox="folio" data-title="Simuloitu verkko" title="Verkko" target="_blank"><img src="images/img_network.png" title="Simuloitu verkko"  class="folio_pic" alt="Kuva virtuaaliverkosta"></a>
               <figcaption class="figure_caption_text">Kuva simuloidusta verkosta</figcaption>
             </figure>
-            <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuvaa reunasta-->
+            <div class="col-xl-1 col-1 col-s-1 "></div><!--Erotetaan kuva reunasta-->
           </article>
+		  
+		  
+		  <article class="folio_article5"> <!-- New (Projektit) section -->
+			<h2 class="text_roboto col-12">Projektit</h2>
+
+			<section>
+				<h3 class="text_roboto col-12">Sääpalvelu</h3>
+				<div class="col-xl-6 col-6 col-s-12"> <!-- Text content for Sääpalvelu project -->
+					<p class="text_montserrat">Sääpalvelu on web-sovellus, jonka avulla käyttäjä voi syöttää lokaatiotiedot (kaupunki ja valtio) ja saada sen hetkiset paikalliset säätiedot. Tämä projekti toimi pääasiassa harjoituksena tiedon siirrossa sekä käsittelyssä eri palveluiden ja palvelimien välillä. 
+					<br><br>NodeJS palvelin palvelee käyttäjälle verkkosivun ja verkkosivuun liitetty Javascript lähettää käyttäjän syöttämät tiedot Node-Red palvelimelle. Node-Red palvelin on saatavilla julkisesti nGrok tunnelin kautta.
+					<br><br>Kun Node-Red palvelin vastaanottaa GET queryn se hakee OpenWeatherMap API:sta lokaation tämänhetkisen sään ja muokkaa datasta tarpeettomat tiedot pois. Sen jälkeen palvelin lähettää haetun säädatan MongoDB tietokantaan ja tarkistaa onko samasta lokaatiosta tallennettu aikaisemmin tietoa tietokantaan. Jos on niin palvelin lähettää viimeisimmän haun säätiedot tämänhetkisen haun lisäksi.
+					<br><br>Github repo: <a href="https://github.com/Duuva/weather-service">https://github.com/Duuva/weather-service</a>
+					<br><br>Palvelun julkinen osoite: <a href="https://weather-service-f622.onrender.com/">https://weather-service-f622.onrender.com/</a>
+					<br><br>Instanssi on asetettu sammumaan automaattisesti jos se ei ole aktiivisessa käytössä joten sivua ei välttämättä saa auki ennenkuin instanssi on taas toiminnassa, jossa voi kestää minuutteja.
+					</p>
+				</div>
+				<div class="remove col-s-1"></div> <!-- Adjust column layout -->
+				<figure class="col-xl-5 col-5 col-s-10 col-xs-12 folio_figure"> <!-- Image for Sääpalvelu project -->
+					<a href="images/weather_app.jpg" data-lightbox="folio" data-title="Sääpalvelu" title="Sääpalvelu" target="_blank">
+					<img src="images/weather_app.jpg" title="Sääpalvelu" class="folio_pic" alt="Kuva Sääpalvelu-sovelluksesta">
+				</a>
+				<figcaption class="figure_caption_text">Diagrammi Sääpalvelu-sovelluksesta</figcaption>
+			</figure>
+			<div class="col-xl-1 col-1 col-s-1"></div> <!-- Add margin between content and edge -->
+			</section>
+		  </article>
+		  
         </div>
         <div class="col-xl-2 col-1 col-s-1 col-xs-1"></div><!--Erotetaan sisältöä reunasta-->
       </main>
